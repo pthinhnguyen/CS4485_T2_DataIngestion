@@ -1,3 +1,3 @@
-# CS4485_T2_DataIngestion
+# CS4485 T2 DataIngestion
 
 Databse user infomation: username: root, pswd: password
