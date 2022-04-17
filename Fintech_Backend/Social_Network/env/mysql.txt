@@ -1,0 +1,8 @@
+CREATE USER 'username'@'host' IDENTIFIED WITH authentication_plugin BY 'password';
+
+CREATE USER 'username'@`%` IDENTIFIED WITH authentication_plugin BY 'password';
+
+
+CREATE USER 'admin'@`%` IDENTIFIED BY 'P@ssWorD';
+
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@`%` WITH GRANT OPTION;
