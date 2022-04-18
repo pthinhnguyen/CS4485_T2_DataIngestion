@@ -49,13 +49,13 @@ def threaded_fetching_data(influencer_raw: Influencer, lock: Lock) -> None:
         tweet_dict_format_update_db = []
 
         # tweet_record: 
-        # 0 <user_name> 
-        # 1 <twitter_user_name> 
-        # 2 <occupation> 
-        # 3 <twitter_user_id> 
-        # 4 <tweet_id> 
-        # 5 <text> 
-        # 6 <created_at>
+        # 0 <tweet_id> 
+        # 1 <created_at> 
+        # 2 <twitter_user_id> 
+        # 3 <twitter_user_name> 
+        # 4 <user_name> 
+        # 5 <occupation> 
+        # 6 <text>
         for tweet_old_record in tweet_record_list:
             for (idx, tweet_new_record) in enumerate(tweet_dict_format_db):    
                 if str(tweet_old_record[4]) == str(tweet_new_record[4]):
