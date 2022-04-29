@@ -8,9 +8,10 @@ This project will get the daily data stock price from Yahoo Finance, a reliable 
 ## Copyright Disclaimer
 <ins>This project contains these data:</ins>
 -   Twitter, Tesla, and Bitcoin price acquired from Yahoo! Finance's API on April 28, 2022
--   Public tweets of 57 Twitter Accounts acquired from Twitter API on April 28, 2022
+-   Public tweets of 58 Twitter Accounts acquired from Twitter API on April 28, 2022
 -   Public tweets of Elon Mustk from 2010 to March 2022 acquired from kaggle.com on April 28, 2022. The dataset is manually downloaded from the URL below
 > https://www.kaggle.com/datasets/ayhmrba/elon-musk-tweets-2010-2021
+-   List of 58 Twitter Usernames and their Twitter IDs manually acquired using tweeterid.com on April 15, 2022. These data is stored in ‘influencer.csv’ and ‘influencer.xlsx’ files.
 
 ## Development Environment Configuration
 > python >= 3.7\
