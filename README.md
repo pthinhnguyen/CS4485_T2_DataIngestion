@@ -13,6 +13,7 @@ This project will get the daily data stock price from Yahoo Finance, a reliable 
 > https://www.kaggle.com/datasets/ayhmrba/elon-musk-tweets-2010-2021
 
 ## Development Environment Configuration
+> python >= 3.7\
 > pip install panda matplotlib mysql-connector yfinance
 
 ## Source Code Structure
