@@ -1,4 +1,5 @@
 from query import *
+
 def toStrDate(date):
 	return str(date.date())
 def createDB(fromDate, toDate, user ,user1 , user2):
