@@ -1,7 +1,7 @@
 from query import *
 def toStrDate(date):
 	return str(date.date())
-def createDB(fromDate, toDate, user):
+def createDB(fromDate, toDate, user ,user1 , user2):
 	#first column : fromDate
 	#second column : toDate
 	#third column : name
@@ -15,7 +15,7 @@ def createDB(fromDate, toDate, user):
 	
 	fromDateStr = str(datetime.datetime(fromDate[0], fromDate[1], fromDate[2]).date())
 	toDateStr = str(datetime.datetime(toDate[0], toDate[1], toDate[2]).date())
-	column = np.asarray(["fromDate" , "toDate" ,"name" , "numberOfTweet" , "AVGBTCHigh" , "AVGBTCLow" , "AVGTWTRHigh" , "AVGTWTRLow"])
+	column = np.asarray(["fromDate" , "toDate" ,"name" , "numberOfTweet" , "AVGBTCHigh" , "AVGBTCLow" , "AVGTWTRHigh" , "AVGTWTRLow" , "name1" , "numTweets1" , "name2" , "numTweets2"])
 	
 	fields = []
 	for i in range(1000000000):
@@ -53,7 +53,12 @@ def createDB(fromDate, toDate, user):
 		AVGLow = sumLow / r
 		row.append(AVGHigh)
 		row.append(AVGLow)
+		row.append( user1)
+		row.append(len(filterDateTimeAuthor(currentDate, nextDate , user1)))
+		row.append(user2)
+		row.append(len(filterDateTimeAuthor(currentDate, nextDate , user2)))
 		fields.append(row)
+
 		currentDate = nextDate + datetime.timedelta(days=1)
 		print("r : ",r, " sumHigh : ",sumHigh)
 		if (nextDate == endDate):
@@ -64,4 +69,4 @@ def createDB(fromDate, toDate, user):
 	frame = pd.DataFrame(np.asarray(fields) , columns = column )
 	frame.to_csv('aggregation'+'.csv')
 
-createDB((2021,1,1) , (2022,4,26) , "@elonmusk")
+createDB((2021,1,1) , (2022,4,26) , "@elonmusk" , "@JoeBiden" , "@katyperry")
